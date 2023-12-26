@@ -31,7 +31,6 @@ export const commands: Command = [
   { cmd: "clear", desc: "clear the terminal", tab: 8 },
   { cmd: "echo", desc: "print out anything", tab: 9 },
   // { cmd: "education", desc: "my education background", tab: 4 },
-  { cmd: "secret", desc: "secret command", tab: 7 },
   { cmd: "email", desc: "send an email to me", tab: 8 },
   { cmd: "gui", desc: "go to my portfolio in GUI", tab: 10 },
   { cmd: "help", desc: "check available commands", tab: 9 },
@@ -76,7 +75,14 @@ const Terminal = () => {
     },
     [inputVal]
   );
-
+  const executeSecretCommand = (command: string) => {
+    if (command === 'secret') {
+      window.open("https://youtu.be/dQw4w9WgXcQ?si=hlQdeqfEIJo6Wgk9", "_blank");
+      console.log("Shh! This is the secret command.");
+      return true;
+    }
+    return false;
+  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setCmdHistory([inputVal, ...cmdHistory]);
@@ -84,6 +90,10 @@ const Terminal = () => {
     setRerender(true);
     setHints([]);
     setPointer(-1);
+    const commandHandled = executeSecretCommand(inputVal);
+    if (!commandHandled) {
+      console.log("Command not found:", inputVal);
+    }
   };
 
   const clearHistory = () => {
@@ -212,6 +222,11 @@ const Terminal = () => {
       {cmdHistory.map((cmdH, index) => {
         const commandArray = _.split(_.trim(cmdH), " ");
         const validCommand = _.find(commands, { cmd: commandArray[0] });
+        // Skip rendering if the command is 'secret'
+        if (commandArray[0] === 'secret') {
+          return null;
+        }
+
         const contextValue = {
           arg: _.drop(commandArray),
           history: cmdHistory,
