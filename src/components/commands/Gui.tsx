@@ -10,7 +10,11 @@ const Gui: React.FC = () => {
 
   /* ===== check current command makes redirect ===== */
   if (rerender && currentCommand[0] === "gui") {
-    window.open("https://gui.djdiptayan.in/", "_blank");
+    const link = document.createElement('a');
+    link.href = "https://gui.djdiptayan.in/";
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.click();
   }
 
   return <span></span>;
