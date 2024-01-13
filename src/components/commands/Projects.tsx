@@ -23,7 +23,13 @@ const Projects: React.FC = () => {
   useEffect(() => {
     if (checkRedirect(rerender, currentCommand, "projects")) {
       projects.forEach(({ id, url }) => {
-        id === parseInt(arg[1]) && window.open(url, "_blank");
+        if (id === parseInt(arg[1])) {
+          const link = document.createElement('a');
+          link.href = url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.click();
+        }
       });
     }
   }, [arg, rerender, currentCommand]);
