@@ -4,6 +4,7 @@ import { termContext } from "../Terminal";
 
 const Resume: React.FC = () => {
     const { history, rerender } = useContext(termContext);
+    const pdfUrl = "./Diptayan_Resume.pdf"; // Replace with the URL of your PDF
 
     useEffect(() => {
         /* ===== get current command ===== */
@@ -11,11 +12,7 @@ const Resume: React.FC = () => {
 
         /* ===== check current command shows resume ===== */
         if (rerender && (currentCommand[0].toLowerCase() === "resume")) {
-            const link = document.createElement('a');
-            link.href = "Diptayan_Resume.pdf"; // replace with the path to your resume file
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.click();
+            window.open(pdfUrl);
         }
     }, [history, rerender]);
 
