@@ -13,6 +13,7 @@ const Resume: React.FC = () => {
         /* ===== check current command shows resume ===== */
         if (rerender && (currentCommand[0].toLowerCase() === "resume")) {
             window.open(pdfUrl);
+            console.log("Opening resume");
         }
     }, [history, rerender]);
 
