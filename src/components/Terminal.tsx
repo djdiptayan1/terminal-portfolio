@@ -77,9 +77,16 @@ const Terminal = () => {
     [inputVal]
   );
   const executeSecretCommand = (command: string) => {
+    const pdfUrl = "./Diptayan_Resume.pdf";
+
     if (command === 'secret') {
       window.open("https://youtu.be/dQw4w9WgXcQ?si=hlQdeqfEIJo6Wgk9", "_blank");
       console.log("Shh! This is the secret command.");
+      return true;
+    }
+    else if (command === 'resume') {
+      window.open(pdfUrl, "_blank");
+      console.log("Opening RESUME");
       return true;
     }
     return false;
