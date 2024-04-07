@@ -4,7 +4,7 @@ import { termContext } from "../Terminal";
 
 const Resume: React.FC = () => {
     const { history, rerender } = useContext(termContext);
-    const pdfUrl = "./Diptayan_Resume.pdf"; // Replace with the URL of your PDF
+    const pdfUrl = "https://resume.djdiptayan.in/Diptayan's%20Resume_1.pdf"; // Replace with the URL of your PDF
 
     useEffect(() => {
         /* ===== get current command ===== */
