@@ -85,8 +85,8 @@ const Terminal = () => {
       return true;
     }
     else if (command === 'resume') {
-      window.open(pdfUrl, "_blank");
-      console.log("Opening RESUME");
+      window.open(pdfUrl);
+      console.log("Opening RESUME PDF");
       return true;
     }
     return false;
