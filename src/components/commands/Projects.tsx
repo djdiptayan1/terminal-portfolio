@@ -62,24 +62,30 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "LingoFlow",
-    desc: "English to Hindi translator powered by advanced Seq2Seq and NLP technology, championing privacy in language translation. Recognized 2nd in the Smart India Hackathon for innovation and expertise.",
-    url: "https://github.com/djdiptayan1/Smart_India_Hackathon",
+    title: "Jyotish Chandra Rice Mill",
+    desc: "A modern website for Jyotish Chandra Rice Mill, showcasing the company's products and services. Built with React.js and MongoDB, it offers a seamless user experience.",
+    url: "https://www.jyotishchandra.com/",
   },
   {
     id: 2,
-    title: "Chatter",
-    desc: "Revolutionize global connections: my Java-powered app offers lightning-fast chats, history preservation, and a sleek interface. Redefining interaction on a global scale!",
-    url: "https://github.com/djdiptayan1/Chat_Application",
-  },
-  {
-    id: 3,
     title: "Altium Workshop",
     desc: "Created a seamless Altium Workshop registration platform using React.js and Firebase for real-time data management, highlighting expertise in modern web app development and secure authentication.",
     url: "https://altium.djdiptayan.in/",
   },
   {
+    id: 3,
+    title: "LingoFlow",
+    desc: "English to Hindi translator powered by advanced Seq2Seq and NLP technology, championing privacy in language translation. Recognized 2nd in the Smart India Hackathon for innovation and expertise.",
+    url: "https://github.com/djdiptayan1/Smart_India_Hackathon",
+  },
+  {
     id: 4,
+    title: "Chatter",
+    desc: "Revolutionize global connections: my Java-powered app offers lightning-fast chats, history preservation, and a sleek interface. Redefining interaction on a global scale!",
+    url: "https://github.com/djdiptayan1/Chat_Application",
+  },
+  {
+    id: 5,
     title: "Gemini",
     desc: "Swift app for intuitive Gemini Pro chat, powered by Google's language generation for interactive conversations.",
     url: "https://github.com/djdiptayan1/Gemini",
